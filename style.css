@@ -1,7 +1,8 @@
 :root {
     --dark: #202020;
     --accent: #FF6E30;
-    --accent-hover:#BC572B;
+    --accent-hover: #BC572B;
+
 }
 
 * {
@@ -33,19 +34,23 @@
     padding: 24px 0;
 }
 
+.header__list {
+    list-style: none;
+    display: flex;
+}
 .nav-link {
     font-size: 16px;
     line-height: 20px;
     color: #FFFFFF;
     text-decoration: none;
-
+    transition-duration: .3s;
 }
+
 .nav-link:hover {
     color: var(--accent);
-    transition-duration: .3s;
 }
+
 .nav-link:active {
-    color:#FFFFFF;
+    color: #FFFFFF;
     background-color: var(--accent-hover);
-    transition-duration: .3s;
 }
