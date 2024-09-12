@@ -1,27 +1,51 @@
 :root {
---dark: #202020;
+    --dark: #202020;
+    --accent: #FF6E30;
+    --accent-hover:#BC572B;
 }
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
 .container {
     max-width: 1350px;
     margin: 0 auto;
     padding: 0 30px;
 }
-@media(max-widht: 768px){
+
+@media(max-widht: 768px) {
     .container {
         padding: 0 27px;
     }
 }
-@media(max-widht: 576px){
+
+@media(max-widht: 576px) {
     .container {
         padding: 0 20px;
     }
 }
+
 .header {
     background-color: var(--dark);
     padding: 24px 0;
+}
+
+.nav-link {
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    text-decoration: none;
+
+}
+.nav-link:hover {
+    color: var(--accent);
+    transition-duration: .3s;
+}
+.nav-link:active {
+    color:#FFFFFF;
+    background-color: var(--accent-hover);
+    transition-duration: .3s;
 }
