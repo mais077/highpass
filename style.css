@@ -2,13 +2,21 @@
     --dark: #202020;
     --accent: #FF6E30;
     --accent-hover: #BC572B;
-
+    --accent-active: #CE4307;
 }
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    transition-duration: .3s;
+    cursor: pointer;
 }
 
 .container {
@@ -29,21 +37,66 @@
     }
 }
 
+.btn-primary {
+    padding: 15px 22px;
+    color: white;
+    background-color: var(--accent);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover);
+}
+
+.btn-primary:active {
+    background-color: var(--accent-active);
+}
+
+.btn-secondary {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: white;
+    border: 3px solid var(--accent);
+    padding: 13px 19px;
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent);
+}
+
+.btn-secondary:active {
+    background-color: var(--accent-active);
+    border-color: var(--accent-active);
+}
+
+
 .header {
     background-color: var(--dark);
     padding: 24px 0;
 }
 
+.header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .header__list {
     list-style: none;
     display: flex;
+    gap: 70px;
 }
+
 .nav-link {
     font-size: 16px;
     line-height: 20px;
     color: #FFFFFF;
     text-decoration: none;
     transition-duration: .3s;
+    padding: 0 5px;
 }
 
 .nav-link:hover {
